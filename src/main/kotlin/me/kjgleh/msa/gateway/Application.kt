@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class MsaGatewayApplication
+class Application
 
 fun main(args: Array<String>) {
-    runApplication<MsaGatewayApplication>(*args)
+    runApplication<Application>(*args)
 }

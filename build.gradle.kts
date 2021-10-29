@@ -15,11 +15,24 @@ repositories {
     mavenCentral()
 }
 
+extra["springCloudVersion"] = "2020.0.4"
+
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+    implementation("org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j")
+    implementation("org.springframework.cloud:spring-cloud-starter-gateway")
+}
+
+dependencyManagement {
+    imports {
+        mavenBom("org.springframework.cloud:spring-cloud-dependencies:${
+            property("springCloudVersion")
+        }")
+    }
 }
 
 tasks.withType<KotlinCompile> {

@@ -23,8 +23,13 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
+    // Spring Cloud
     implementation("org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j")
     implementation("org.springframework.cloud:spring-cloud-starter-gateway")
+
+    // Springdoc openapi
+    implementation("org.springdoc:springdoc-openapi-webflux-ui:1.5.12")
+    implementation("org.springdoc:springdoc-openapi-kotlin:1.5.12")
 }
 
 dependencyManagement {
